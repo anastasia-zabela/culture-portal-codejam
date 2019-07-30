@@ -38,6 +38,7 @@ const Directors = () => {
             )
         })}
       </ol>
+      
     </Layout>
   )
 }
