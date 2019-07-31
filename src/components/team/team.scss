@@ -1,0 +1,84 @@
+.team {
+  position: relative;
+  padding-bottom: 40px;
+
+  & h4 {
+    position: relative;
+    margin: 40px 0 70px 0;
+    text-align: center;
+    text-transform: uppercase;
+    color: #3d0d15;
+
+    &::before {
+      content: ' ';
+      position: absolute;
+      top: 40px;
+      right: 47%;
+      width: 60px;
+      height: 4px;
+      background: #b67435;
+    }
+  }
+
+  &__member {
+    margin-bottom: 40px;
+
+    & h5 {
+      text-transform: uppercase;
+    }
+
+    & .btn-primary {
+      margin-right: 15px;
+      background: #9f907e;
+      border: none;
+
+      &:hover {
+        background: #3d0d15;
+        border: none;
+      }
+    }
+
+    &--photo {
+      width: 200px;
+      height: 200px;
+      background-size: 200px;
+      border-radius: 100px;
+    }
+  }
+
+  & .row {
+    & .col-6 {
+      padding: 0 30px;
+    }
+
+    &:nth-child(even) {
+      & .col-6 {
+        &:first-child {
+          order: 2;
+        }
+
+        &:nth-child(2) {
+          text-align: right;
+        }
+      }
+    }
+
+    &:nth-child(odd) {
+      & .col-6:first-child {
+        & div {
+          float: right;
+        }
+      }
+    }
+  }
+  
+  &::before {
+    content: '';
+    position: absolute;
+    right: 40%;
+    bottom: 30px;
+    width: 300px;
+    height: 4px;
+    background: #b67435;
+  }
+}
