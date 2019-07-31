@@ -1,0 +1,34 @@
+.d-of-day {
+  background: #e6e6e6;
+
+  & .container {
+    padding: 50px;
+  }
+
+  & .flex-end {
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  & h6 {
+    font-weight: bold;
+    color: #042e27;
+  }
+
+  &__photo {
+    width: 300px;
+    height: 300px;
+    margin-right: 50px;
+    background: url(https://upload.wikimedia.org/wikipedia/commons/0/0c/%C5%81arysa_Aleksandro%C5%ADskaja._%D0%9B%D0%B0%D1%80%D1%8B%D1%81%D0%B0_%D0%90%D0%BB%D0%B5%D0%BA%D1%81%D0%B0%D0%BD%D0%B4%D1%80%D0%BE%D1%9E%D1%81%D0%BA%D0%B0%D1%8F_%281937%29.jpg?uselang=ru) no-repeat;
+  }
+
+  & .btn-primary {
+    background: #b67435;
+    border: none;
+
+    &:hover {
+      background: #3d0d15;
+      border: none;
+    }
+  }
+}
