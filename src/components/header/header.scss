@@ -1,0 +1,19 @@
+header {
+  margin: 10px 0;
+
+  & .row {
+    width: 100%;
+  }
+
+  & h4 {
+    color: #042e27;
+  }
+
+  & .dropdown {
+    float: right;
+
+    & .btn-secondary:hover {
+      background-color: #2c3128;
+    }
+  }
+}
