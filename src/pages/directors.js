@@ -1,7 +1,8 @@
-import React from "react"
-import Layout from "../components/layout"
-import { graphql, useStaticQuery } from "gatsby"
-import { Link } from "gatsby"
+import React from "react";
+import { graphql, useStaticQuery } from "gatsby";
+
+import Layout from "../components/layout";
+import Searchbar from '../components/searchbar';
 
 const Directors = () => {
   const data = useStaticQuery(graphql`
@@ -26,19 +27,15 @@ const Directors = () => {
       }
     }
   `)
+  const options = data.allContentfulTheaterDirector.edges.map(item => ({
+    value: item.node.slug,
+    label: item.node.directorName,
+    slug: item.node.slug,
+  }))
   return (
     <Layout>
       <ol>
-        {data.allContentfulTheaterDirector.edges.map((edge) => {
-          return (
-            <li key={edge.node.slug}>
-              <Link to={`/directors/${edge.node.slug}`}>
-                <h2>{edge.node.directorName}</h2>
-                <p>{edge.node.slug} </p>
-              </Link>
-            </li>
-          )
-        })}
+        <Searchbar options={options} />
       </ol>
     </Layout>
   )
