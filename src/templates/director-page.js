@@ -33,7 +33,7 @@ const DirectorPage = ({ data }) => {
         )
       })}
 
-      <GoogleMap srcLink={place.internal.content} />
+      <GoogleMap srcLink={place.internal.content}></GoogleMap>
 
       <div className={directorPageStyles.gallery}>
 
