@@ -10,7 +10,7 @@ const GoogelMap = ({ srcLink }) => {
           width: "600px",
           height: "450px",
           frameborder: "0",
-          border: "5px",
+          border: "0px",
         }}
         allowFullScreen
       ></iframe>
