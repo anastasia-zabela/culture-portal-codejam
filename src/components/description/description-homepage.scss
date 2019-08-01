@@ -32,6 +32,7 @@
   &__theater-img {
     grid-area: 5 / 6 / 10 / 10;
     z-index: 10;
+    transform: scaleX(-1);
   }
 
   &__director-img {
