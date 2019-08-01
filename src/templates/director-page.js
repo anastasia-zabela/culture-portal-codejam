@@ -11,6 +11,9 @@ const DirectorPage = ({data}) => {
     <Layout>
       <h1>{directorName}</h1>
       <img src={image.file.url} alt={directorName}/>
+      <p>{text.text}</p>
+
+
 
 
       <Link to="/directors">View more theater directors</Link>
