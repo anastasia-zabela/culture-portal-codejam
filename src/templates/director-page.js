@@ -10,7 +10,7 @@ const DirectorPage = ({data}) => {
   return (
     <Layout>
       <h1>{directorName}</h1>
-      <img src={image.file.url} alt={directorName}/>
+      <img src={image.file.url} alt={directorName} className={directorPageStyles.dirimage}/>
       <p>{text.text}</p>
 
 
