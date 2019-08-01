@@ -33,7 +33,7 @@ const Directors = () => {
     slug: item.node.slug,
   }))
   return (
-    <Layout>
+    <Layout page="directors">
       <ol>
         <Searchbar options={options} />
       </ol>

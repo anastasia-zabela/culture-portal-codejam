@@ -4,10 +4,11 @@ import Footer from './footer/footer';
 import layoutStyles from './layout.module.scss'
 
 const Layout = (props) => {
+  const { page } = props;
   return (
     <div className={layoutStyles.container}>
       <div className={layoutStyles.content}>
-        <Header />
+        <Header page={page} />
           {props.children}
       </div>
       <Footer />

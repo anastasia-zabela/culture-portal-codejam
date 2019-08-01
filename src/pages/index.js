@@ -1,6 +1,6 @@
 import React from 'react';
 import '../styles/index.scss';
-import 'bootstrap/dist/css/bootstrap.min.css';
+// import 'bootstrap/dist/css/bootstrap.min.css';
 // import 'bootstrap/dist/js/bootstrap.bundle.min';
 
 import Layout from '../components/layout';
@@ -10,7 +10,7 @@ import Team from '../components/team/team';
 
 const IndexPage = () => {
   return (
-    <Layout>
+    <Layout page="/" >
       <Description />
       <DirOfTheDay />
       <Team />

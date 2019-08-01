@@ -1,7 +1,9 @@
 import React from 'react';
-import { Link } from 'gatsby-plugin-intl';
+import { Link } from 'gatsby';
 
-const Header = () => {
+import SwitchButtons from '../switchButtons';
+
+const Header = ({ page }) => {
   return (
     <header>
       <nav className="navbar navbar-expand-lg navbar-light">
@@ -25,11 +27,7 @@ const Header = () => {
                 <button className="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                   English
                 </button>
-                <div className="dropdown-menu" aria-labelledby="dropdownMenu2">
-                  <button className="dropdown-item" type="button">English</button>
-                  <button className="dropdown-item" type="button">Белорусский</button>
-                  <button className="dropdown-item" type="button">Русский</button>
-                </div>
+                <SwitchButtons page={page} />
               </div>
             </div>
           </div>
