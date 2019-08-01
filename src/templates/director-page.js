@@ -10,6 +10,7 @@ const DirectorPage = ({data}) => {
   return (
     <Layout>
       <h1>{directorName}</h1>
+      <img src={image.file.url} alt={directorName}/>
 
 
       <Link to="/directors">View more theater directors</Link>
