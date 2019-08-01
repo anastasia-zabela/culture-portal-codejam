@@ -1,6 +1,6 @@
 import React from 'react';
 import Select from 'react-select';
-import { Link } from "gatsby";
+import { Link } from "gatsby-plugin-intl";
 
 class SearchBar extends React.Component {
   state = {

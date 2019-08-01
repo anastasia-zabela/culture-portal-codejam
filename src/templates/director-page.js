@@ -1,6 +1,6 @@
 import React from 'react'
 import Layout from "../components/layout"
-import { Link } from "gatsby"
+import { Link } from "gatsby-plugin-intl"
 import { Timeline, TimelineItem }  from 'vertical-timeline-component-for-react'
 import directorPageStyles from './director-page.module.scss'
 
