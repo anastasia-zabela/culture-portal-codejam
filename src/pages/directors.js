@@ -1,8 +1,8 @@
 import React from "react";
 import { graphql, useStaticQuery } from "gatsby";
 
-import Layout from "../components/layout";
-import Searchbar from '../components/searchbar';
+import Layout from "../components/layout/layout";
+import Searchbar from '../components/searchbar/searchbar';
 
 const Directors = () => {
   const data = useStaticQuery(graphql`

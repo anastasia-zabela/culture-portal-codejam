@@ -2,7 +2,8 @@
 
 | time spent | feature |
 |------------|---------|
-| 1h | init project and add basic structure |
+| 1 hour | Init project and adding basic structure |
+| 6 hours | Adding simple template for home page and creating design for it |
 
 
 *lion9*
@@ -27,12 +28,6 @@
 
 
 *matirniy*
-
-| time spent | feature |
-|------------|---------|
-
-
-*evgenysamohvalov*
 
 | time spent | feature |
 |------------|---------|
