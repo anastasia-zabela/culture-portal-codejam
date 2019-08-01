@@ -1,13 +1,14 @@
-import React from 'react'
-import Layout from "../components/layout"
-import { Link } from "gatsby-plugin-intl"
-import { Timeline, TimelineItem } from 'vertical-timeline-component-for-react'
-import directorPageStyles from './director-page.module.scss'
+import React from 'react';
+import Layout from "../components/layout";
+import { Link } from "gatsby-plugin-intl";
+import { Timeline, TimelineItem } from 'vertical-timeline-component-for-react';
+import { graphql } from 'gatsby';
+import directorPageStyles from './director-page.module.scss';
 
 import GoogleMap from '../components/googlemap';
 
 const DirectorPage = ({ data }) => {
-  const { directorName, text, image, json, location, gallery } = data.contentfulTheaterDirector;
+  const { directorName, text, image, json, place, gallery } = data.contentfulTheaterDirector;
 
   return (
     <Layout>
@@ -32,7 +33,7 @@ const DirectorPage = ({ data }) => {
         )
       })}
 
-      <GoogleMap />
+      <GoogleMap srcLink={place.internal.content} />
 
       <div className={directorPageStyles.gallery}>
 
@@ -71,9 +72,10 @@ export const pageQuery = graphql`
           content
         }
       }
-      location {
-        lon
-        lat
+      place {
+        internal {
+          content
+        }
       }
       gallery {
         file {
