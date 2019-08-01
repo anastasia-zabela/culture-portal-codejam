@@ -12,7 +12,7 @@ const DirectorPage = ({ data }) => {
   const { directorName, text, image, json, place, gallery, videoLink } = data.contentfulTheaterDirector;
   const slicePosition = videoLink.indexOf('?v=') + 3;
   const videoID = videoLink.slice(slicePosition);
-  
+
   return (
     <Layout>
       <h1>{directorName}</h1>
@@ -22,7 +22,7 @@ const DirectorPage = ({ data }) => {
 
       {json.entries.map((entry) => {
         return (
-          <>
+          <div key={entry.key}>
             <Timeline lineColor={'#ddd'}>
               <TimelineItem
                 key={entry.key}
@@ -32,7 +32,7 @@ const DirectorPage = ({ data }) => {
                 <p>{entry.content}</p>
               </TimelineItem>
             </Timeline>
-          </>
+          </div>
         )
       })}
 
@@ -46,7 +46,7 @@ const DirectorPage = ({ data }) => {
 
         {gallery.map((gallery_item, key) => {
           return (
-            <div><img src={gallery_item.file.url} alt={gallery_item.file.url} className={directorPageStyles.image} /></div>
+            <div key={key}><img src={gallery_item.file.url} alt={gallery_item.file.url} className={directorPageStyles.image} /></div>
           )
         })}
       </div>

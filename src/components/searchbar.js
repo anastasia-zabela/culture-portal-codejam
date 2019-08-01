@@ -35,6 +35,7 @@ class SearchBar extends React.Component {
           : (options.map((item) => {
             return (
               <Link
+                key={item.slug}
                 to={`/directors/${item.slug}`}>
                 <h2>{item.label}</h2>
                 <p>{item.slug} </p>
