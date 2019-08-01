@@ -4,13 +4,15 @@ import { Link } from "gatsby-plugin-intl";
 import { Timeline, TimelineItem } from 'vertical-timeline-component-for-react';
 import { graphql } from 'gatsby';
 import directorPageStyles from './director-page.module.scss';
-import ModalButton from '../components/modal/modalButton'
 
 import GoogleMap from '../components/googlemap';
+import ModalButton from '../components/modal/modalButton'
 
 const DirectorPage = ({ data }) => {
-  const { directorName, text, image, json, place, gallery } = data.contentfulTheaterDirector;
-
+  const { directorName, text, image, json, place, gallery, videoLink } = data.contentfulTheaterDirector;
+  const slicePosition = videoLink.indexOf('?v=') + 3;
+  const videoID = videoLink.slice(slicePosition);
+  
   return (
     <Layout>
       <h1>{directorName}</h1>
@@ -36,8 +38,10 @@ const DirectorPage = ({ data }) => {
 
       <GoogleMap srcLink={place.internal.content}></GoogleMap>
       <div>
-      <ModalButton videoID="8t0vNu2fCCM" />
+
+        <ModalButton videoID={videoID} />
       </div>
+
       <div className={directorPageStyles.gallery}>
 
         {gallery.map((gallery_item, key) => {
@@ -59,6 +63,7 @@ export const pageQuery = graphql`
   query($slug: String!) {
     contentfulTheaterDirector(slug: { eq: $slug }) {
       directorName
+      videoLink
       slug
       text {
         text
