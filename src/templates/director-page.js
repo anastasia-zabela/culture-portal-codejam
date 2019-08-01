@@ -14,6 +14,22 @@ const DirectorPage = ({data}) => {
       <p>{text.text}</p>
 
 
+        {json.entries.map((entry) => {
+          return (
+            <>
+              <Timeline lineColor={'#ddd'}>
+                <TimelineItem
+                  key={entry.key}
+                  dateText={entry.date}
+                  dateInnerStyle={{ background: '#76bb7f' }}
+                >
+                  <p>{entry.content}</p>
+                </TimelineItem>
+              </Timeline>
+            </>
+          )
+        })}
+
 
 
       <Link to="/directors">View more theater directors</Link>
