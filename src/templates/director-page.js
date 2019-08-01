@@ -4,6 +4,7 @@ import { Link } from "gatsby-plugin-intl";
 import { Timeline, TimelineItem } from 'vertical-timeline-component-for-react';
 import { graphql } from 'gatsby';
 import directorPageStyles from './director-page.module.scss';
+import ModalButton from '../components/modal/modalButton'
 
 import GoogleMap from '../components/googlemap';
 
@@ -34,7 +35,9 @@ const DirectorPage = ({ data }) => {
       })}
 
       <GoogleMap srcLink={place.internal.content}></GoogleMap>
-
+      <div>
+      <ModalButton videoID="8t0vNu2fCCM" />
+      </div>
       <div className={directorPageStyles.gallery}>
 
         {gallery.map((gallery_item, key) => {
