@@ -9,6 +9,15 @@
 
 | time spent | feature |
 |------------|---------|
+| 1 hour | Adding gatsby-node.js  |
+|------------|---------|
+| 1 hour | Creating template page  |
+|------------|---------|
+| 0.5 hour | Adding text data from Contentfull to template  |
+|------------|---------|
+| 2.5 hours | Adding timeline to template  |
+|------------|---------|
+| 1 hour | Adding gallery to template  |
 
 
 *yurikazliak*
