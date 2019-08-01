@@ -30,7 +30,14 @@ const DirectorPage = ({data}) => {
           )
         })}
 
+      <div className={directorPageStyles.gallery}>
 
+      {gallery.map((gallery_item, key) => {
+        return (
+             <div><img src={gallery_item.file.url} alt={gallery_item.file.url} className={directorPageStyles.image}/></div>
+        )
+      })}
+      </div>
 
       <Link to="/directors">View more theater directors</Link>
       <Link to="/">Home</Link>
