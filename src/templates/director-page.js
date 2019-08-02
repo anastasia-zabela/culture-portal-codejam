@@ -1,11 +1,12 @@
 import React from 'react';
-import Layout from "../components/layout";
-import { Link } from "gatsby-plugin-intl";
+
+import { Link } from 'gatsby-plugin-intl';
 import { Timeline, TimelineItem } from 'vertical-timeline-component-for-react';
 import { graphql } from 'gatsby';
 import directorPageStyles from './director-page.module.scss';
 
-import GoogleMap from '../components/googlemap';
+import Layout from '../components/layout/layout';
+import GoogleMap from '../components/map/googlemap';
 import ModalButton from '../components/modal/modalButton'
 
 const DirectorPage = ({ data }) => {
