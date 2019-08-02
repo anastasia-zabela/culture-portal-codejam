@@ -9,9 +9,13 @@ import DirOfTheDay from '../../components/director-of-the-day/dir-of-the-day';
 import Team from '../../components/team/team';
 
 const IndexPage = () => {
+  const title = 'Театр - это что-то там такое';
+  const innerText = "Лорем ипсум пусам шпонсом максум бряксум траляляля";
+
+  
   return (
     <Layout page="/" >
-      <Description />
+      <Description title={title} innerText={innerText} />
       <DirOfTheDay lang="ru" />
       <Team />
     </Layout>

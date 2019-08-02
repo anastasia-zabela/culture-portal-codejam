@@ -9,9 +9,15 @@ import DirOfTheDay from '../../components/director-of-the-day/dir-of-the-day';
 import Team from '../../components/team/team';
 
 const IndexPage = () => {
+  const title = 'Theater is a living art';
+  const innerText = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. "
+    + "Proin non augue semper, pulvinar metus eu, gravida mauris. "
+    + "Aenean vitae iaculis dolor, vel tempus nunc. Sed at sem turpis. "
+    + "Donec finibus neque nec mauris sagittis, non ornare nulla gravida. ";
+    
   return (
     <Layout page="/" >
-      <Description />
+      <Description title={title} innerText={innerText} />
       <DirOfTheDay lang="en" />
       <Team />
     </Layout>
