@@ -16,44 +16,53 @@ const DirectorPage = ({ data }) => {
 
   return (
     <Layout>
-      <h1>{directorName}</h1>
-      <img src={image.file.url} alt={directorName} className={directorPageStyles.dirimage} />
-      <p>{text.text}</p>
-
-
-      {json.entries.map((entry) => {
-        return (
-          <div key={entry.key}>
-            <Timeline lineColor={'#ddd'}>
-              <TimelineItem
-                key={entry.key}
-                dateText={entry.date}
-                dateInnerStyle={{ background: '#76bb7f' }}
-              >
-                <p>{entry.content}</p>
-              </TimelineItem>
-            </Timeline>
+      <div className={`container ${directorPageStyles.directorPage}`}>
+        <div className="row">
+          <div className="col-5">
+            <img className={directorPageStyles.dirimage} src={image.file.url} alt={directorName} />
           </div>
-        )
-      })}
+          <div className="col-7">
+            <h2>{directorName}</h2>
+            <p>{text.text}</p>
+          </div>
+        </div>
+        
 
-      <GoogleMap srcLink={place.internal.content}></GoogleMap>
-      <div>
 
-        <ModalButton videoID={videoID} />
-      </div>
-
-      <div className={directorPageStyles.gallery}>
-
-        {gallery.map((gallery_item, key) => {
+        {json.entries.map((entry) => {
           return (
-            <div key={key}><img src={gallery_item.file.url} alt={gallery_item.file.url} className={directorPageStyles.image} /></div>
+            <div key={entry.key}>
+              <Timeline lineColor={'#ddd'}>
+                <TimelineItem
+                  key={entry.key}
+                  dateText={entry.date}
+                  dateInnerStyle={{ background: '#76bb7f' }}
+                >
+                  <p>{entry.content}</p>
+                </TimelineItem>
+              </Timeline>
+            </div>
           )
         })}
-      </div>
 
-      <Link to="/directors">View more theater directors</Link>
-      <Link to="/">Home</Link>
+        <GoogleMap srcLink={place.internal.content}></GoogleMap>
+        <div>
+
+          <ModalButton videoID={videoID} />
+        </div>
+
+        <div className={directorPageStyles.gallery}>
+
+          {gallery.map((gallery_item, key) => {
+            return (
+              <div key={key}><img src={gallery_item.file.url} alt={gallery_item.file.url} className={directorPageStyles.image} /></div>
+            )
+          })}
+        </div>
+
+        <Link to="/directors">View more theater directors</Link>
+        <Link to="/">Home</Link>
+      </div>
     </Layout>
   )
 }
