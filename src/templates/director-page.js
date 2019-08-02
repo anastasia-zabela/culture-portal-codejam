@@ -9,7 +9,7 @@ import GoogleMap from '../components/map/googlemap';
 import ModalButton from '../components/modal/modalButton'
 
 const DirectorPage = ({ data }) => {
-  const { directorName, text, image, json, place, gallery, videoLink, works } = data.contentfulTheaterDirector;
+  const { directorName, text, image, json, place, gallery, videoLink, works, years } = data.contentfulTheaterDirector;
   const slicePosition = videoLink.indexOf('?v=') + 3;
   const videoID = videoLink.slice(slicePosition);
   const listOfWorks = works.map((item, i) => {
@@ -20,7 +20,7 @@ const DirectorPage = ({ data }) => {
 
   return (
     <Layout>
-      <h1>{directorName}</h1>
+      <h1>{`${directorName} (${years})`}</h1>
       <img src={image.file.url} alt={directorName} className={directorPageStyles.dirimage} />
       <p>{text.text}</p>
 
@@ -97,6 +97,7 @@ export const pageQuery = graphql`
         }
       }
       works
+      years
     }
   }
 `;
