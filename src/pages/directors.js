@@ -4,20 +4,11 @@ import { graphql, useStaticQuery } from "gatsby";
 import Layout from "../components/layout";
 import Searchbar from '../components/searchbar';
 
-const Directors = () => {
+const Directors = (props) => {
+  console.log(props.path.slice(1, 3))
   const data = useStaticQuery(graphql`
       query {
-      allContentfulTheaterDirector (
-        sort: {
-          fields: directorName,
-          order: ASC
-        }
-        filter: {
-          node_locale: {
-            eq: "en-US"
-          }
-        }
-      ){
+      allContentfulTheaterDirector {
         edges {
           node {
             directorName
@@ -31,7 +22,7 @@ const Directors = () => {
     value: item.node.slug,
     label: item.node.directorName,
     slug: item.node.slug,
-  }))
+  })).filter(elem => elem.slug.slice(-2) === props.path.slice(1, 3))
   return (
     <Layout>
       <ol>

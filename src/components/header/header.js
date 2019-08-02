@@ -1,6 +1,8 @@
 import React from 'react';
 import { Link } from 'gatsby-plugin-intl';
 
+import Switcher from '../../components/switcher';
+
 const Header = () => {
   return (
     <header>
@@ -20,6 +22,7 @@ const Header = () => {
                 </li>
               </ul>
               </div>
+              <Switcher />
             <div className="col-3">
               <div className="dropdown">
                 <button className="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">

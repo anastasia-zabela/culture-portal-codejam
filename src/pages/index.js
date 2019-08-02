@@ -8,7 +8,8 @@ import Description from '../components/description/description-homepage';
 import DirOfTheDay from '../components/director-of-the-day/dir-of-the-day';
 import Team from '../components/team/team';
 
-const IndexPage = () => {
+const IndexPage = (props) => {
+  console.log(props)
   return (
     <Layout>
       <Description />

@@ -8,7 +8,9 @@ import directorPageStyles from './director-page.module.scss';
 import GoogleMap from '../components/googlemap';
 import ModalButton from '../components/modal/modalButton'
 
-const DirectorPage = ({ data }) => {
+const DirectorPage = (props) => {
+  console.log(props)
+  const { data } = props;
   const { directorName, text, image, json, place, gallery, videoLink } = data.contentfulTheaterDirector;
   const slicePosition = videoLink.indexOf('?v=') + 3;
   const videoID = videoLink.slice(slicePosition);
