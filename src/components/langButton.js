@@ -1,5 +1,5 @@
 import React from 'react';
-import { IntlContextConsumer, changeLocale, Link } from "gatsby-plugin-intl";
+import { changeLocale, Link } from "gatsby-plugin-intl";
 
 const LangButton = ({ lang, children, currentLocale, path, slug }) => {
   return (
