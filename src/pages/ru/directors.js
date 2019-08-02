@@ -23,8 +23,18 @@ const Directors = () => {
     label: item.node.directorName,
     slug: item.node.slug,
   }))
+  const siteTitle = 'Театральные режиссёры Беларуси';
+  const buttonNames = {
+    home: "На стартовую",
+    list: "К списку режиссёров"
+  }
+
   return (
-    <Layout page="directors">
+    <Layout
+      page="directors"
+      siteTitle={siteTitle}
+      buttonNames={buttonNames}
+    >
       <ol>
         <Searchbar options={options} />
       </ol>

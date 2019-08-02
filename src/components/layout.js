@@ -4,16 +4,21 @@ import Footer from './footer/footer';
 import layoutStyles from './layout.module.scss'
 
 const Layout = (props) => {
-  const { page } = props;
-  const { slug } = props;
+  const { page, slug, siteTitle, buttonNames } = props;
+
   return (
     <div className={`${layoutStyles.container} notranslate`}>
-      <div className={layoutStyles.content}>        
-        <Header page={page} slug={slug} />
-          {props.children}
+      <div className={layoutStyles.content}>
+        <Header
+          page={page}
+          slug={slug}
+          siteTitle={siteTitle}
+          buttonNames={buttonNames}
+        />
+        {props.children}
       </div>
       <Footer />
-  </div>
+    </div>
   )
 }
 

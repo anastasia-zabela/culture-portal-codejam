@@ -10,12 +10,36 @@ import ModalButton from '../components/modal/modalButton'
 
 const DirectorPage = ({ data }) => {
   const { directorName, slug, text, image, json, place, gallery, videoLink } = data.contentfulTheaterDirector;
-  const slicePosition = videoLink? videoLink.indexOf('?v=') + 3 : null;
-  const videoID = slicePosition? videoLink.slice(slicePosition) : null;
-  // console.log('slug:', slug.slice(0, -3));
+  const slicePosition = videoLink ? videoLink.indexOf('?v=') + 3 : null;
+  const videoID = slicePosition ? videoLink.slice(slicePosition) : null;
 
-   return (
-     <Layout slug={slug.slice(0, -3)}>
+  let siteTitle = '';
+  const buttonNames = {
+    home: "",
+    list: ""
+  }
+
+  if (slug.slice(-2) === 'en') {
+    siteTitle = 'THEATER DIRECTORS OF BELARUS';
+    buttonNames.home = "Home";
+    buttonNames.list = "LIST OF THEATER DIRECTORS";
+  } else if (slug.slice(-2) === 'be') {
+    siteTitle = 'Тэатральныя рэжысёры Беларусi';
+    buttonNames.home = "На пачатковую";
+    buttonNames.list = "Да спису рэжысерау";
+  } else if (slug.slice(-2) === 'ru') {
+    siteTitle = 'Театральные режиссёры Беларуси';
+    buttonNames.home = "На стартовую";
+    buttonNames.list = "К списку режиссёров";
+  }
+
+
+  return (
+    <Layout
+      slug={slug.slice(0, -3)}
+      siteTitle={siteTitle}
+      buttonNames={buttonNames}
+    >
       <h1>{directorName}</h1>
       <img src={image.file.url} alt={directorName} className={directorPageStyles.dirimage} />
       <p>{text.text}</p>

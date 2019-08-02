@@ -9,14 +9,23 @@ import DirOfTheDay from '../components/director-of-the-day/dir-of-the-day';
 import Team from '../components/team/team';
 
 const IndexPage = () => {
+  const siteTitle = 'THEATER DIRECTORS OF BELARUS';
+  const buttonNames = {
+    home: "Home",
+    list: "LIST OF THEATER DIRECTORS "
+  }
   const title = 'Theater is a living art';
   const innerText = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. "
-  + "Proin non augue semper, pulvinar metus eu, gravida mauris. "
-  + "Aenean vitae iaculis dolor, vel tempus nunc. Sed at sem turpis. "
-  + "Donec finibus neque nec mauris sagittis, non ornare nulla gravida. ";
+    + "Proin non augue semper, pulvinar metus eu, gravida mauris. "
+    + "Aenean vitae iaculis dolor, vel tempus nunc. Sed at sem turpis. "
+    + "Donec finibus neque nec mauris sagittis, non ornare nulla gravida. ";
 
   return (
-    <Layout page="/" >
+    <Layout
+      page="/"
+      siteTitle={siteTitle}
+      buttonNames={buttonNames}
+    >
       <Description title={title} innerText={innerText} />
       <DirOfTheDay lang="en" />
       <Team />

@@ -23,8 +23,16 @@ const Directors = () => {
     label: item.node.directorName,
     slug: item.node.slug,
   }))
+  const siteTitle = 'THEATER DIRECTORS OF BELARUS';
+  const buttonNames = {
+    home: "Home",
+    list: "LIST OF THEATER DIRECTORS "
+  }
+
   return (
-    <Layout page="directors">
+    <Layout page="directors"
+      siteTitle={siteTitle}
+      buttonNames={buttonNames}>
       <ol>
         <Searchbar options={options} />
       </ol>

@@ -3,22 +3,22 @@ import { Link } from 'gatsby';
 
 import SwitchButtons from '../switchButtons';
 
-const Header = ({ page, slug }) => {
+const Header = ({ page, slug, siteTitle, buttonNames }) => {
   return (
     <header>
       <nav className="navbar navbar-expand-lg navbar-light">
       <div className="container-fluid">
         <div className="row">
           <div className="col-3">
-            <h4>Theater directors of Belarus</h4>
+            <h4>{siteTitle}</h4>
           </div>
             <div className="col-6">
               <ul className="nav justify-content-center">
                 <li className="nav-item active">
-                  <Link className="nav-link" to="/">Home</Link>
+                  <Link className="nav-link" to="/">{buttonNames.home}</Link>
                 </li>
                 <li className="nav-item">
-                  <Link className="nav-link" to="/directors">List of theater directors</Link>
+                  <Link className="nav-link" to="/directors">{buttonNames.list}</Link>
                 </li>
               </ul>
               </div>
