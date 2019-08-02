@@ -9,14 +9,13 @@ import GoogleMap from '../components/googlemap';
 import ModalButton from '../components/modal/modalButton'
 
 const DirectorPage = (props) => {
-  console.log(props)
   const { data } = props;
-  const { directorName, text, image, json, place, gallery, videoLink } = data.contentfulTheaterDirector;
+  const { directorName, text, image, json, place, gallery, videoLink, slug } = data.contentfulTheaterDirector;
   const slicePosition = videoLink.indexOf('?v=') + 3;
   const videoID = videoLink.slice(slicePosition);
 
   return (
-    <Layout>
+    <Layout path={props.path} slug={slug}>
       <h1>{directorName}</h1>
       <img src={image.file.url} alt={directorName} className={directorPageStyles.dirimage} />
       <p>{text.text}</p>

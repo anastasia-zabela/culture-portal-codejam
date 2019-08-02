@@ -1,14 +1,9 @@
-import React from "react"
-import { IntlContextConsumer, changeLocale } from "gatsby-plugin-intl"
+import React from "react";
+import { IntlContextConsumer } from "gatsby-plugin-intl";
 
-const languageName = {
-  en: "Eng",
-  be: "Бел",
-  ru: "Рус",
-}
+import LangButton from './langButton';
 
-const Switcher = () => {
-  // let active = React.createRef();
+const Switcher = ({ path, slug }) => {
 
   return (
     <div
@@ -18,16 +13,45 @@ const Switcher = () => {
       }}
     >
       <IntlContextConsumer>
+        {({ language: currentLocale }) =>
+          <>
+            <LangButton
+              lang='en'
+              path={path}
+              slug={slug}
+              currentLocale={currentLocale}
+            >Eng</LangButton>
+            <LangButton
+              lang='ru'
+              path={path}
+              slug={slug}
+              currentLocale={currentLocale}
+            >Rus</LangButton>
+            <LangButton
+              lang='be'
+              path={path} 
+              slug={slug}
+              currentLocale={currentLocale}
+            >Bel</LangButton>
+          </>
+        }
+      </IntlContextConsumer>
+    </div>
+  )
+}
+
+export default Switcher
+
+
+/* <IntlContextConsumer>
         {({ languages, language: currentLocale }) =>
           languages.map(language => (
             <button
               key={language}
               className={currentLocale === language ? `${language} active` : language}
-              // ref={currentLocale === language ? active : language}
               onClick={(e) => {
                 changeLocale(language);
                 console.log('language:', language);
-                // console.log(document.querySelector('.header').id);
                 // console.log(e.target.className);
               }
               }
@@ -38,12 +62,10 @@ const Switcher = () => {
               }}
             >
               {languageName[language]}
-            </button>
+              {path ?
+                (<Link to={`${path.slice(3, -3)}${language}`}>{languageName[language]}</Link>) :
+                (languageName[language]) }
+            </button >
           ))
         }
-      </IntlContextConsumer>
-    </div>
-  )
-}
-
-export default Switcher
+      </IntlContextConsumer > */

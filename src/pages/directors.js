@@ -5,7 +5,6 @@ import Layout from "../components/layout";
 import Searchbar from '../components/searchbar';
 
 const Directors = (props) => {
-  console.log(props.path.slice(1, 3))
   const data = useStaticQuery(graphql`
       query {
       allContentfulTheaterDirector {

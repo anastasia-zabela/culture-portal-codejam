@@ -3,7 +3,7 @@ import { Link } from 'gatsby-plugin-intl';
 
 import Switcher from '../../components/switcher';
 
-const Header = () => {
+const Header = ({ path, slug }) => {
   return (
     <header>
       <nav className="navbar navbar-expand-lg navbar-light">
@@ -22,7 +22,6 @@ const Header = () => {
                 </li>
               </ul>
               </div>
-              <Switcher />
             <div className="col-3">
               <div className="dropdown">
                 <button className="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -35,6 +34,7 @@ const Header = () => {
                 </div>
               </div>
             </div>
+              <Switcher path={path} slug={slug} />
           </div>
         </div>
       </nav>
