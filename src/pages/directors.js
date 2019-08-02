@@ -28,11 +28,14 @@ const Directors = () => {
     home: "Home",
     list: "LIST OF THEATER DIRECTORS "
   }
+  const pageLang = 'en';
 
   return (
     <Layout page="directors"
       siteTitle={siteTitle}
-      buttonNames={buttonNames}>
+      buttonNames={buttonNames}
+      pageLang={pageLang}
+      >
       <ol>
         <Searchbar options={options} />
       </ol>

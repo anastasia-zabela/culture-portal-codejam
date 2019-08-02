@@ -28,9 +28,11 @@ const Directors = () => {
     home: "Home",
     list: "LIST OF THEATER DIRECTORS "
   }
-
+  const pageLang = 'en';
   return (
-    <Layout page="directors"
+    <Layout
+      page="directors" 
+      pageLang={pageLang}
       siteTitle={siteTitle}
       buttonNames={buttonNames}>
       <ol>

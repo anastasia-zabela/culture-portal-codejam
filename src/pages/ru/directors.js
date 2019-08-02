@@ -28,10 +28,12 @@ const Directors = () => {
     home: "На стартовую",
     list: "К списку режиссёров"
   }
-
+  const pageLang = 'ru';
+  
   return (
     <Layout
-      page="directors"
+      page="directors" 
+      pageLang={pageLang}
       siteTitle={siteTitle}
       buttonNames={buttonNames}
     >

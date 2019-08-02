@@ -36,7 +36,7 @@ const DirectorPage = ({ data }) => {
 
   return (
     <Layout
-      slug={slug.slice(0, -3)}
+      slug={slug}
       siteTitle={siteTitle}
       buttonNames={buttonNames}
     >

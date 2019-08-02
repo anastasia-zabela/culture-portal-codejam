@@ -14,6 +14,7 @@ const IndexPage = () => {
     home: "На стартовую",
     list: "К списку режиссёров"
   }
+  const pageLang = 'ru';
 
   const title = 'Театр - это что-то там такое';
   const innerText = "Лорем ипсум пусам шпонсом максум бряксум траляляля";
@@ -23,6 +24,7 @@ const IndexPage = () => {
       page="/"
       siteTitle={siteTitle}
       buttonNames={buttonNames}
+      pageLang={pageLang}
     >
       <Description title={title} innerText={innerText} />
       <DirOfTheDay lang="ru" />

@@ -14,6 +14,7 @@ const IndexPage = () => {
     home: "Home",
     list: "LIST OF THEATER DIRECTORS "
   }
+  const pageLang = 'en';
   const title = 'Theater is a living art';
   const innerText = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. "
     + "Proin non augue semper, pulvinar metus eu, gravida mauris. "
@@ -25,6 +26,7 @@ const IndexPage = () => {
       page="/"
       siteTitle={siteTitle}
       buttonNames={buttonNames}
+      pageLang={pageLang}
     >
       <Description title={title} innerText={innerText} />
       <DirOfTheDay lang="en" />

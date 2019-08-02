@@ -14,6 +14,7 @@ const IndexPage = () => {
     home: "На пачатковую",
     list: "Да спису рэжысерау"
   }
+  const pageLang = 'be';
   const title = 'Тэатр - гэта жыццё';
   const innerText = "Панаехала гасцей з іншаземных абласцей "
     + "Не няправільна гасцёў з іншаземных абласцёў "
@@ -24,11 +25,12 @@ const IndexPage = () => {
   return (
     <Layout
       page="/"
+      pageLang={pageLang}
       siteTitle={siteTitle}
       buttonNames={buttonNames}
       >
       <Description title={title} innerText={innerText} />
-      <DirOfTheDay lang="be" />
+      <DirOfTheDay lang={pageLang} />
       <Team />
     </Layout>
   )
