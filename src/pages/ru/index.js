@@ -12,7 +12,7 @@ const IndexPage = () => {
   return (
     <Layout page="/" >
       <Description />
-      <DirOfTheDay />
+      <DirOfTheDay lang="ru" />
       <Team />
     </Layout>
   )

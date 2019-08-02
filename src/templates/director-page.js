@@ -10,8 +10,8 @@ import ModalButton from '../components/modal/modalButton'
 
 const DirectorPage = ({ data }) => {
   const { directorName, slug, text, image, json, place, gallery, videoLink } = data.contentfulTheaterDirector;
-  const slicePosition = videoLink.indexOf('?v=') + 3;
-  const videoID = videoLink.slice(slicePosition);
+  const slicePosition = videoLink? videoLink.indexOf('?v=') + 3 : null;
+  const videoID = slicePosition? videoLink.slice(slicePosition) : null;
   // console.log('slug:', slug.slice(0, -3));
 
    return (

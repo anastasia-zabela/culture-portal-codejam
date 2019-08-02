@@ -12,14 +12,14 @@ const SwicthButtons = ({ page, slug }) => {
       </button>
       <button className="dropdown-item" type="button">
         <Link to={page ? `be/${page}` : `/directors/${slug}-be`}>
-          Белорусский
+          Беларуская
           </Link>
       </button>
       <button className="dropdown-item" type="button">
         <Link to={page ? `ru/${page}` : `/directors/${slug}-ru`}>
-        Русский
+          Русский
         </Link>
-        </button>
+      </button>
     </div>
   )
 }

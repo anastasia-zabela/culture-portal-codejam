@@ -1,19 +1,14 @@
 import React from 'react';
 import { graphql, useStaticQuery } from "gatsby";
 
-const DirOfTheDay = () => {
+const DirOfTheDay = ({ lang }) => {
   const data = useStaticQuery(graphql`
       query {
-      allContentfulTheaterDirector (
-        sort: {
-          fields: directorName,
-          order: ASC
-        }
-        filter: { node_locale: { eq: "en-US" } }
-      ){
+      allContentfulTheaterDirector {
         edges {
           node {
             directorName
+            slug
             text {
               text
             }
@@ -30,10 +25,10 @@ const DirOfTheDay = () => {
   const directorsArray = data.allContentfulTheaterDirector.edges.map(item => ({
     text: item.node.text.text,
     name: item.node.directorName,
-    // url: item.node.image.file.url,
+    lang: item.node.slug.slice(-2),
     imageURL: item.node.image.file.url,
-  }))
-  // console.log(directorsArray);
+  })).filter(elem => elem.lang === lang);
+  console.log(directorsArray);
   // console.log(data);
   // console.log(data2);
   const getRandomInt = (max) => {

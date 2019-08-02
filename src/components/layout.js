@@ -7,8 +7,8 @@ const Layout = (props) => {
   const { page } = props;
   const { slug } = props;
   return (
-    <div className={layoutStyles.container}>
-      <div className={layoutStyles.content}>
+    <div className={`${layoutStyles.container} notranslate`}>
+      <div className={layoutStyles.content}>        
         <Header page={page} slug={slug} />
           {props.children}
       </div>
