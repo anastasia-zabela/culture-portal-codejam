@@ -1,25 +1,28 @@
 import React from 'react';
-
 import { Link } from 'gatsby-plugin-intl';
 import { Timeline, TimelineItem } from 'vertical-timeline-component-for-react';
 import { graphql } from 'gatsby';
-import directorPageStyles from './director-page.module.scss';
 
+import directorPageStyles from './director-page.module.scss';
 import Layout from '../components/layout/layout';
 import GoogleMap from '../components/map/googlemap';
 import ModalButton from '../components/modal/modalButton'
 
 const DirectorPage = ({ data }) => {
-  const { directorName, text, image, json, place, gallery, videoLink } = data.contentfulTheaterDirector;
+  const { directorName, text, image, json, place, gallery, videoLink, works, years } = data.contentfulTheaterDirector;
   const slicePosition = videoLink.indexOf('?v=') + 3;
   const videoID = videoLink.slice(slicePosition);
+  const listOfWorks = works.map((item, i) => {
+    return (
+      <li key={`work_${i}`}>{item}</li>
+    )
+  });
 
   return (
     <Layout>
-      <h1>{directorName}</h1>
+      <h1>{`${directorName} (${years})`}</h1>
       <img src={image.file.url} alt={directorName} className={directorPageStyles.dirimage} />
       <p>{text.text}</p>
-
 
       {json.entries.map((entry) => {
         return (
@@ -37,11 +40,13 @@ const DirectorPage = ({ data }) => {
         )
       })}
 
-      <GoogleMap srcLink={place.internal.content}></GoogleMap>
       <div>
-
-        <ModalButton videoID={videoID} />
+        <ul>{listOfWorks}</ul>
       </div>
+
+      <GoogleMap srcLink={place.internal.content}></GoogleMap>
+
+      <ModalButton videoID={videoID} />
 
       <div className={directorPageStyles.gallery}>
 
@@ -91,6 +96,8 @@ export const pageQuery = graphql`
           url
         }
       }
+      works
+      years
     }
   }
 `;
