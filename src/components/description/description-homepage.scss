@@ -2,6 +2,7 @@
   display: grid;
   grid-template: repeat(10, 1fr) / repeat(12, 1fr);
   height: 93vh;
+  background: #d6d7d2;
 
   & h2 {
     grid-area: 3 / 4 / 10 / 10;

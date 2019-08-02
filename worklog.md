@@ -3,7 +3,8 @@
 | time spent | feature |
 |------------|---------|
 | 1 hour | Init project and adding basic structure |
-| 6 hours | Adding simple template for home page and creating design for it |
+| 6 hours | Adding template for home page and creating design for it |
+| 3 hours | Adding new template for list of directors and adding style for it |
 
 
 *lion9*

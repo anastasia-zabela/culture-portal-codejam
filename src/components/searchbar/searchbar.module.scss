@@ -1,0 +1,39 @@
+.search-box {
+  margin: 0 auto;
+  width: 500px;
+
+  & .searchbar {
+    margin: 40px 0 20px 0;
+  }
+
+  & .list {
+    & button {
+      margin-bottom: 20px;
+      background: #b67435;
+      border: none;
+
+      &:active {
+        background: #b67435 !important;
+      }
+    }
+  }
+
+  & .director {
+    display: flex;
+    padding: 10px;
+    color: #2c3128;
+
+    &:hover {
+      text-decoration: none;
+      background: #d6d7d2;
+    }
+
+    & h2 {
+      display: flex;
+      align-items: center;
+      width: 400px;
+      padding-left: 40px;
+    }
+  }
+}
+
