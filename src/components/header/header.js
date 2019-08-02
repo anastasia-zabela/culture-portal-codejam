@@ -3,7 +3,7 @@ import { Link } from 'gatsby';
 
 import SwitchButtons from '../switchButtons';
 
-const Header = ({ page }) => {
+const Header = ({ page, slug }) => {
   return (
     <header>
       <nav className="navbar navbar-expand-lg navbar-light">
@@ -27,7 +27,7 @@ const Header = ({ page }) => {
                 <button className="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                   English
                 </button>
-                <SwitchButtons page={page} />
+                <SwitchButtons page={page} slug={slug} />
               </div>
             </div>
           </div>

@@ -7,7 +7,7 @@ import Searchbar from '../../components/searchbar';
 const Directors = () => {
   const data = useStaticQuery(graphql`
       query {
-      allContentfulTheaterDirector (filter: {slug: {regex: "/-be$/"}})
+      allContentfulTheaterDirector (filter: {slug: {regex: "/-ru$/"}})
       {
         edges {
           node {

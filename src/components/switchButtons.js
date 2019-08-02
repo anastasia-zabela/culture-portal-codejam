@@ -1,22 +1,22 @@
 import React from 'react'
 import { Link } from 'gatsby'
 
-const SwicthButtons = ({ page }) => {
+const SwicthButtons = ({ page, slug }) => {
 
   return (
     <div className="dropdown-menu" aria-labelledby="dropdownMenu2">
       <button className="dropdown-item" type="button">
-        <Link to={`en/${page}`}>
+        <Link to={page ? `en/${page}` : `/directors/${slug}-en`}>
           English
         </Link>
       </button>
       <button className="dropdown-item" type="button">
-        <Link to={`be/${page}`}>
+        <Link to={page ? `be/${page}` : `/directors/${slug}-be`}>
           Белорусский
           </Link>
       </button>
       <button className="dropdown-item" type="button">
-        <Link to={`ru/${page}`}>
+        <Link to={page ? `ru/${page}` : `/directors/${slug}-ru`}>
         Русский
         </Link>
         </button>

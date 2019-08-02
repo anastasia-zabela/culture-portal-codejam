@@ -7,17 +7,8 @@ import Searchbar from '../components/searchbar';
 const Directors = () => {
   const data = useStaticQuery(graphql`
       query {
-      allContentfulTheaterDirector (
-        sort: {
-          fields: directorName,
-          order: ASC
-        }
-        filter: {
-          node_locale: {
-            eq: "en-US"
-          }
-        }
-      ){
+      allContentfulTheaterDirector (filter: {slug: {regex: "/-en$/"}})
+      {
         edges {
           node {
             directorName

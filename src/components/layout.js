@@ -5,10 +5,11 @@ import layoutStyles from './layout.module.scss'
 
 const Layout = (props) => {
   const { page } = props;
+  const { slug } = props;
   return (
     <div className={layoutStyles.container}>
       <div className={layoutStyles.content}>
-        <Header page={page} />
+        <Header page={page} slug={slug} />
           {props.children}
       </div>
       <Footer />

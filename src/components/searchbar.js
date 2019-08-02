@@ -12,7 +12,7 @@ class SearchBar extends React.Component {
   render() {
     const { options } = this.props;
     const { selectedOption } = this.state;
-
+    
     return (
       <div className="search-box"
         style={{
