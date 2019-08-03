@@ -9,5 +9,22 @@
   "description": {
     "title": "Надо что-то написать",
     "text": "Тут тоже надо что-то написать"
+  },
+  "team": {
+    "title": "Наша команда",
+    "members": {
+      "first": {
+        "contribution": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus massa diam,feugiat quis purus eu, lobortis fermentum nunc. Русский"
+      },
+      "second": {
+        "contribution": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus massa diam,feugiat quis purus eu, lobortis fermentum nunc. Русский"
+      },
+      "third": {
+        "contribution": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus massa diam,feugiat quis purus eu, lobortis fermentum nunc. Русский"
+      },
+      "fourth": {
+        "contribution": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus massa diam,feugiat quis purus eu, lobortis fermentum nunc. Русский"
+      }
+    }
   }
 }

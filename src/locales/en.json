@@ -9,5 +9,22 @@
   "description": {
     "title": "Theater is a living art",
     "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin non augue semper, pulvinar metus eu, gravida mauris. Aenean vitae iaculis dolor, vel tempus nunc. Sed at sem turpis. Donec finibus neque nec mauris sagittis, non ornare nulla gravida. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin non augue semper, pulvinar metus eu, gravida mauris. Aenean vitae iaculis dolor, vel tempus nunc. Sed at sem turpis. Donec finibus neque nec mauris sagittis, non ornare nulla gravida. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Sed in nulla vitae nisi tincidunt varius at a odio. Nullam quis pulvinar libero. Ut eget ante a risus volutpat sagittis in eu neque. Curabitur laoreet sem quis fermentum maximus."
+  },
+  "team": {
+    "title": "Our team",
+    "members": {
+      "first": {
+        "contribution": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus massa diam,feugiat quis purus eu, lobortis fermentum nunc. English"
+      },
+      "second": {
+        "contribution": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus massa diam,feugiat quis purus eu, lobortis fermentum nunc. English"
+      },
+      "third": {
+        "contribution": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus massa diam,feugiat quis purus eu, lobortis fermentum nunc. English"
+      },
+      "fourth": {
+        "contribution": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus massa diam,feugiat quis purus eu, lobortis fermentum nunc. English"
+      }
+    }
   }
 }
