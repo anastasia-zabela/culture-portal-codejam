@@ -10,15 +10,15 @@
     background-color: rgba(110, 74, 7, 0.74);
     padding-left: 10%; 
     & img {
-      height: 25vw;
-      width: 18vw;
+      height: 21vw;
+      width: 15vw;
       margin: 15px;
     }
     .top__info{
       margin: 0 0 10% 5%;
       width: 60%;
       & h1 {
-        font-size: 2vw;
+        font-size: 1.7vw;
         font-weight: 800;
         font-family: 'Rubik Mono One', sans-serif;
         margin: 10px;
@@ -57,6 +57,16 @@
         align-items: center;
         width: 50%;
         font-size: 1.4vw;
+        & button{
+          margin: 5px;
+          background-color: white;
+          color: red;
+          border-color: white;
+          &:hover{
+            background-color: red;
+            color: white;
+          }
+        }
       }
       & iframe{
         margin: 20px 40px 20px 0;
