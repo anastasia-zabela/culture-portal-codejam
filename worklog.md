@@ -28,6 +28,8 @@
 | 2.5 hour | Create and add directors page |
 | 0.5 hour | Add information from contenful to directors of the day |
 | 4 hours | Create and add module for google maps |
+| 20 hours | Add ability to change languages |
+| 5 hours | Search for content of the portal |
 
 
 *matirniy*
