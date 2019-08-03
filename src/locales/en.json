@@ -30,5 +30,6 @@
   "directorOfTheDay": {
     "title": "Theater director of the day",
     "button": "Read more"
-  }
+  },
+  "pageNotFound": "404! Page not found"  
 }
