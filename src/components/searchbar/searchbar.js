@@ -8,7 +8,7 @@ import searchBarStyle from './searchbar.module.scss';
 
 class SearchBar extends React.Component {
   constructor() {
-    super('searchbox');
+    super();
     this.state = {
       selectedOption: null,
     };

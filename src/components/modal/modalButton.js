@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 import Modal from './modal';
 import YouTube from 'react-youtube';
-
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faYoutube } from '@fortawesome/free-brands-svg-icons'
 class ModalButton extends Component {
   state = {
     isOpen: false,
@@ -23,7 +24,9 @@ class ModalButton extends Component {
     const { videoID } = this.props;
     return (
       <>
-        <button onClick={this.openModal}>Show modal</button>
+        <button type="button" className="btn btn-primary"
+          onClick={this.openModal}
+        ><FontAwesomeIcon icon={faYoutube} /> YouTube</button>
         <Modal
           title="Youtube video"
           isOpen={this.state.isOpen}
