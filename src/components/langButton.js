@@ -31,27 +31,3 @@ const LangButton = ({ lang, children, currentLocale, path, slug }) => {
 }
 
 export default LangButton;
-
-/*  {
-      slug?(<button
-        style = {{
-          color: currentLocale === lang ? `red` : `black`,
-    margin: 3,
-      cursor: `pointer`,
-       }}
-       > <Link to={`${lang}/directors/${slug.slice(0, -3)}-${lang}`} > {children}</Link >
-    </button >
-
-    ) : (
-  <button
-    onClick={() => {
-      changeLocale(lang);
-    }}
-    style={{
-      color: currentLocale === lang ? `red` : `black`,
-      margin: 3,
-      cursor: `pointer`,
-    }}
-  >{children}
-  </button>
-)} */

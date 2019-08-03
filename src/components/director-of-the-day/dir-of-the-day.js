@@ -5,13 +5,7 @@ import { injectIntl } from 'gatsby-plugin-intl';
 const DirOfTheDay = ({ intl, props }) => {
   const data = useStaticQuery(graphql`
       query {
-      allContentfulTheaterDirector (
-        sort: {
-          fields: directorName,
-          order: ASC
-        }
-        filter: { node_locale: { eq: "en-US" } }
-      ){
+      allContentfulTheaterDirector {
         edges {
           node {
             directorName
@@ -34,10 +28,7 @@ const DirOfTheDay = ({ intl, props }) => {
     name: item.node.directorName,
     imageURL: item.node.image.file.url,
     slug: item.node.slug
-  })).filter(elem => elem.slug.slice(-2) === props.path.slice(1, 3));
-  // console.log(directorsArray);
-  // console.log(data);
-  // console.log(data2);
+  })).filter(elem => elem.slug.slice(-2) === props.location.pathname.slice(1, 3));
   const getRandomInt = (max) => {
     return Math.floor(Math.random() * Math.floor(max));
   };

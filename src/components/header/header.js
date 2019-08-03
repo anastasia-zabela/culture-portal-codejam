@@ -14,9 +14,15 @@ const lang = {
 }
 
 const Header = ({ path, slug, intl }) => {
-  const headerTitle = path ? lang[`${path.slice(-3, -1)}`].header.title : null;
-  const homeLink = path ? lang[`${path.slice(-3, -1)}`].header.nav.home : null;
-  const directorsLink = path ? lang[`${path.slice(-3, -1)}`].header.nav.list : null;
+
+  let headerTitle = null;
+  let homeLink = null;
+  let directorsLink = null;
+  if (path && path.includes('directors')) {
+    headerTitle = lang[`${path.slice(-3, -1)}`].header.title;
+    homeLink = lang[`${path.slice(-3, -1)}`].header.nav.home;
+    directorsLink = lang[`${path.slice(-3, -1)}`].header.nav.list;
+  }
   return (
     <header>
       <nav className="navbar navbar-expand-lg navbar-light">
