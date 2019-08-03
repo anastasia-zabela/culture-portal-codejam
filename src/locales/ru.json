@@ -26,5 +26,9 @@
         "contribution": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus massa diam,feugiat quis purus eu, lobortis fermentum nunc. Русский"
       }
     }
+  },
+  "directorOfTheDay": {
+    "title": "Театральный режиссёр дня",
+    "button": "Читать больше"
   }
 }

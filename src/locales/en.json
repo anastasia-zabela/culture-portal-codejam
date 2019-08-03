@@ -26,5 +26,9 @@
         "contribution": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus massa diam,feugiat quis purus eu, lobortis fermentum nunc. English"
       }
     }
+  },
+  "directorOfTheDay": {
+    "title": "Theater director of the day",
+    "button": "Read more"
   }
 }

@@ -13,7 +13,7 @@ const IndexPage = (props) => {
   return (
     <Layout>
       <Description />
-      <DirOfTheDay />
+      <DirOfTheDay props={props} />
       <Team />
     </Layout>
   )
