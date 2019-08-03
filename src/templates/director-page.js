@@ -20,7 +20,7 @@ const DirectorPage = (props) => {
   });
 
   return (
-    <Layout>
+    <Layout path={props.path} slug={slug}>
       <div className="directors">
         <div className="directors__top">
           <img src={image.file.url} alt={directorName} className={directorPageStyles.dirimage} />
