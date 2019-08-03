@@ -26,6 +26,7 @@
     "popper.js": "^1.15.0",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
+    "react-intl": "^2.9.0",
     "react-select": "^3.0.4",
     "react-youtube": "^7.9.0",
     "vertical-timeline-component-for-react": "^1.0.6"
