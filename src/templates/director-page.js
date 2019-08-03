@@ -20,10 +20,17 @@ const DirectorPage = ({ data }) => {
 
   return (
     <Layout>
-      <h1>{`${directorName} (${years})`}</h1>
-      <img src={image.file.url} alt={directorName} className={directorPageStyles.dirimage} />
-      <p>{text.text}</p>
-
+      <div className={`container ${directorPageStyles.directorPage}`}>
+        <div className="row">
+          <div className="col-5">
+            <img className={directorPageStyles.dirimage} src={image.file.url} alt={directorName} />
+          </div>
+          <div className="col-7">
+            <h2>{directorName}</h2>
+            <p>{text.text}</p>
+          </div>
+        </div>
+  
       {json.entries.map((entry) => {
         return (
           <div key={entry.key}>
@@ -49,16 +56,16 @@ const DirectorPage = ({ data }) => {
       <ModalButton videoID={videoID} />
 
       <div className={directorPageStyles.gallery}>
+          {gallery.map((gallery_item, key) => {
+            return (
+              <div key={key}><img src={gallery_item.file.url} alt={gallery_item.file.url} className={directorPageStyles.image} /></div>
+            )
+          })}
+        </div>
 
-        {gallery.map((gallery_item, key) => {
-          return (
-            <div key={key}><img src={gallery_item.file.url} alt={gallery_item.file.url} className={directorPageStyles.image} /></div>
-          )
-        })}
+        <Link to="/directors">View more theater directors</Link>
+        <Link to="/">Home</Link>
       </div>
-
-      <Link to="/directors">View more theater directors</Link>
-      <Link to="/">Home</Link>
     </Layout>
   )
 }
