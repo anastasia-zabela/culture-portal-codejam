@@ -1,0 +1,34 @@
+{
+  "header": {
+    "title": "Тэатральныя рэжысёры Беларусi",
+    "nav": {
+      "home": "На пачатковую",
+      "list": "Да спису рэжысерау"
+    }
+  },
+  "description": {
+    "title": "Трэба нешта напісаць",
+    "text": "Тут таксама трэба нешта напісаць"
+  },
+  "team": {
+    "title": "Наша каманда",
+    "members": {
+      "first": {
+        "contribution": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus massa diam,feugiat quis purus eu, lobortis fermentum nunc. Беларуская"
+      },
+      "second": {
+        "contribution": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus massa diam,feugiat quis purus eu, lobortis fermentum nunc. Беларуская"
+      },
+      "third": {
+        "contribution": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus massa diam,feugiat quis purus eu, lobortis fermentum nunc. Беларуская"
+      },
+      "fourth": {
+        "contribution": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus massa diam,feugiat quis purus eu, lobortis fermentum nunc. Беларуская"
+      }
+    }
+  },
+  "directorOfTheDay": {
+    "title": "Тэатральны рэжысёр дня",
+    "button": "Чытаць больш"
+  }
+}

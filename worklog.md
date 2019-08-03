@@ -6,6 +6,7 @@
 | 6 hours | Adding template for home page and creating design for it |
 | 3 hours | Adding new template for list of directors and adding style for it |
 | 1 hour | Adding list of works and years of life to template |
+| 1 hour | Changing styles for director page (name, photo, description) |
 
 
 *lion9*

@@ -8,8 +8,9 @@ import Layout from '../components/layout/layout';
 import GoogleMap from '../components/map/googlemap';
 import ModalButton from '../components/modal/modalButton'
 
-const DirectorPage = ({ data }) => {
-  const { directorName, text, image, json, place, gallery, videoLink, works, years } = data.contentfulTheaterDirector;
+const DirectorPage = (props) => {
+  const { data } = props;
+  const { directorName, text, image, json, place, gallery, videoLink, slug, works, years } = data.contentfulTheaterDirector;
   const slicePosition = videoLink.indexOf('?v=') + 3;
   const videoID = videoLink.slice(slicePosition);
   const listOfWorks = works.map((item, i) => {
