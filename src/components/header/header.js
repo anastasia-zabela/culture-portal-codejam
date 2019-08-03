@@ -9,7 +9,7 @@ const Header = ({ path, slug, intl }) => {
       <nav className="navbar navbar-expand-lg navbar-light">
       <div className="container-fluid">
         <div className="row">
-          <div className="col-3">
+          <div className="col-3" style={{ paddingLeft: 0 }}>
             <h4>{intl.formatMessage({ id: "header.title" })}</h4>
           </div>
             <div className="col-6">

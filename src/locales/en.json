@@ -5,5 +5,9 @@
       "home": "Home",
       "list": "List of theater directors"
     }
+  },
+  "description": {
+    "title": "Theater is a living art",
+    "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin non augue semper, pulvinar metus eu, gravida mauris. Aenean vitae iaculis dolor, vel tempus nunc. Sed at sem turpis. Donec finibus neque nec mauris sagittis, non ornare nulla gravida. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin non augue semper, pulvinar metus eu, gravida mauris. Aenean vitae iaculis dolor, vel tempus nunc. Sed at sem turpis. Donec finibus neque nec mauris sagittis, non ornare nulla gravida. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Sed in nulla vitae nisi tincidunt varius at a odio. Nullam quis pulvinar libero. Ut eget ante a risus volutpat sagittis in eu neque. Curabitur laoreet sem quis fermentum maximus."
   }
 }
