@@ -89,27 +89,6 @@
       & img:hover {
         transform: scale(1.2);
       }
-    }
-    .links{
-      width: 100%;
-      display: flex;
-      justify-content: center;
-
-      padding: 10px;
-      background-color: rgba(110, 74, 7, 0.74);     
-      & a {
-        margin: 0 15vw;
-        font-weight: 600;
-        padding: 2px 0;
-        color: black;
-        font-size: 1vw;
-      }
-      & a:hover{
-        text-decoration: none;
-        color:#e49504;
-      }
-    }
+    }    
   }
 }
-
-
