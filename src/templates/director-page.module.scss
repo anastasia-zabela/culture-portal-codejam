@@ -36,6 +36,7 @@
     margin: 10px 0;
     .timeline{
       margin: 15px;
+      font-size: 18px;
     }
   }
   &__works{
@@ -43,14 +44,6 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    & img {
-      width: 330px;
-      margin: 5px;
-      transition: all .2s;
-    }
-    & img:hover {
-      transform: scale(1.4);
-    }
     .info{
       width: 100%;
       display: flex;
@@ -62,24 +55,29 @@
         display: flex;
         flex-direction: column;
         align-items: center;
-        width: 40%;
-        font-size: 1.6vw;
+        width: 50%;
+        font-size: 1.4vw;
       }
       & iframe{
         margin: 20px 40px 20px 0;
       }
     }
     .gallery{
-      height: 580px;
+      width: 80%;
+      margin: 0 0 60px 0;
       display: grid;
-      grid-gap: 30px;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      grid-template-rows: repeat(2, 250px);
+      grid-gap: 50px;
+      grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+      grid-template-rows: repeat(2, 400px);
       & img {
         margin: 20px;
         width: 100%;
         height: 100%;
         object-fit: cover;
+        transition: all .2s;
+      }
+      & img:hover {
+        transform: scale(1.2);
       }
     }
     .links{
