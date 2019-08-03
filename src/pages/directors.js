@@ -1,8 +1,7 @@
 import React from "react";
-import { graphql, useStaticQuery } from "gatsby";
 
-import Layout from "../components/layout";
-import Searchbar from '../components/searchbar';
+import Layout from "../components/layout/layout";
+import ListOfDir from "../components/list-of-directors/list-of-directors";
 
 const Directors = (props) => {
   const data = useStaticQuery(graphql`
@@ -24,9 +23,7 @@ const Directors = (props) => {
   })).filter(elem => elem.slug.slice(-2) === props.path.slice(1, 3))
   return (
     <Layout>
-      <ol>
-        <Searchbar options={options} />
-      </ol>
+      <ListOfDir />  
     </Layout>
   )
 }

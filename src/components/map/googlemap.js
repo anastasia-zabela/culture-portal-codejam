@@ -5,6 +5,7 @@ const GoogelMap = ({ srcLink }) => {
   return (
     <>
       <iframe
+        title="googlemap"
         src={srcLink}
         style={{
           width: "600px",

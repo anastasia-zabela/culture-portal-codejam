@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import './modal.scss';
 
+import modalStyles from './modal.module.scss';
 import Portal from './portal';
 
 const Modal = ({
@@ -10,22 +10,20 @@ const Modal = ({
   return (
     <>
       {isOpen && <Portal>
-        <div className="modalOverlay">
-          <div className="modalWindow">
-            <div className="modalHeader">
-              <div className="modalTitle">{title}</div>
+        <div className={modalStyles.modalOverlay}>
+          <div className={modalStyles.modalWindow}>
+            <div className={modalStyles.modalHeader}>
+              <div className={modalStyles.modalTitle}>{title}</div>
               <button onClick={onCancel}>Cancel</button>
             </div>
             <div
-              className="modalBody"
+              className={modalStyles.modalBody}
               style={{
-                width: '660px',
+                width: '680px',
                 height: '500px'
               }}
             >
               {children}
-            </div>
-            <div className="modalFooter">
             </div>
           </div>
         </div>
