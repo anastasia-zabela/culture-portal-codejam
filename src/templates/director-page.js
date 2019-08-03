@@ -63,10 +63,6 @@ const DirectorPage = (props) => {
               )
             })}
           </div>
-          <div className="links">
-            <Link to="/">Home</Link>
-            <Link to="/directors">View more theater directors</Link>
-          </div>
 
         </div>
 

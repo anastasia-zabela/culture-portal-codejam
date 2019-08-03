@@ -1,6 +1,6 @@
 import React from 'react';
 import { graphql, useStaticQuery } from "gatsby";
-import { injectIntl } from 'gatsby-plugin-intl';
+import { injectIntl, Link } from 'gatsby-plugin-intl';
 
 const DirOfTheDay = ({ intl, props }) => {
   const data = useStaticQuery(graphql`
@@ -40,17 +40,28 @@ const DirOfTheDay = ({ intl, props }) => {
         <div className="row">
           <div className="flex-end col-6">
             <div className="d-of-day__photo"
-            style={{
-              backgroundImage: `url(${directorsArray[randomDirector].imageURL})`,
-              backgroundSize: "100%",
-            }}>
+              style={{
+                backgroundImage: `url(${directorsArray[randomDirector].imageURL})`,
+                backgroundSize: "100%",
+              }}>
             </div>
           </div>
           <div className="col-6">
             <h6>{intl.formatMessage({ id: "directorOfTheDay.title" })}</h6>
             <h3>{directorsArray[randomDirector].name}</h3>
             <p>{directorsArray[randomDirector].text}</p>
-              <button type="button" className="btn btn-primary">{intl.formatMessage({ id: "directorOfTheDay.button" })}</button>
+            <button
+              type="button"
+              className="btn btn-primary"
+            ><Link
+              style={{
+                textDecoration: 'none',
+                color: 'white',
+              }}
+              to={`/directors/${directorsArray[randomDirector].slug}`}>
+                {intl.formatMessage({ id: "directorOfTheDay.button" })}
+              </Link>
+            </button>
           </div>
         </div>
       </div>
