@@ -1,25 +1,64 @@
 import React from 'react';
-import { Link } from 'gatsby-plugin-intl';
+import { Link, injectIntl } from 'gatsby-plugin-intl';
+import { Link as LinkGat } from 'gatsby';
 
-const Header = () => {
+import Switcher from '../../components/switcher';
+import be from '../../locales/be.json';
+import ru from '../../locales/ru.json';
+import en from '../../locales/en.json';
+
+const lang = {
+  be: be,
+  ru: ru,
+  en: en
+}
+
+const Header = ({ path, slug, intl }) => {
+
+  let headerTitle = null;
+  let homeLink = null;
+  let directorsLink = null;
+  if (path && path.includes('directors')) {
+    headerTitle = lang[`${path.slice(-3, -1)}`].header.title;
+    homeLink = lang[`${path.slice(-3, -1)}`].header.nav.home;
+    directorsLink = lang[`${path.slice(-3, -1)}`].header.nav.list;
+  }
   return (
     <header>
       <nav className="navbar navbar-expand-lg navbar-light">
-      <div className="container-fluid">
-        <div className="row">
-          <div className="col-3">
-            <h4>Theater directors of Belarus</h4>
-          </div>
+        <div className="container-fluid">
+          <div className="row">
+            <div className="col-3">
+              <>
+                {headerTitle ?
+                  (<h4>{headerTitle}</h4>)
+                  :
+                  (<h4>{intl.formatMessage({ id: "header.title" })}</h4>)
+                }
+              </>
+            </div>
             <div className="col-6">
               <ul className="nav justify-content-center">
                 <li className="nav-item active">
-                  <Link className="nav-link" to="/">Home</Link>
+                  <>
+                    {path ?
+                      (<LinkGat className="nav-link" to={`/${path.slice(-3)}/`}>{homeLink}</LinkGat>)
+                      :
+                      (<Link className="nav-link" to="/">{intl.formatMessage({ id: "header.nav.home" })}</Link>)
+                    }
+                  </>
                 </li>
                 <li className="nav-item">
-                  <Link className="nav-link" to="/directors">List of theater directors</Link>
+                  <>
+                    {path ?
+                      (<LinkGat className="nav-link" to={`/${path.slice(-3)}/directors/`}>{directorsLink}</LinkGat>)
+                      :
+                      (<Link className="nav-link" to="/directors">{intl.formatMessage({ id: "header.nav.list" })}</Link>)
+                    }
+                  </>
                 </li>
               </ul>
-              </div>
+            </div>
             <div className="col-3">
               <div className="dropdown">
                 <button className="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -32,6 +71,7 @@ const Header = () => {
                 </div>
               </div>
             </div>
+            <Switcher path={path} slug={slug} />
           </div>
         </div>
       </nav>
@@ -39,4 +79,4 @@ const Header = () => {
   )
 }
 
-export default Header;
+export default injectIntl(Header);

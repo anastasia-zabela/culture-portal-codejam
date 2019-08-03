@@ -1,16 +1,11 @@
 import React from 'react';
 import { graphql, useStaticQuery } from "gatsby";
+import { injectIntl } from 'gatsby-plugin-intl';
 
-const DirOfTheDay = () => {
+const DirOfTheDay = ({ intl, props }) => {
   const data = useStaticQuery(graphql`
       query {
-      allContentfulTheaterDirector (
-        sort: {
-          fields: directorName,
-          order: ASC
-        }
-        filter: { node_locale: { eq: "en-US" } }
-      ){
+      allContentfulTheaterDirector {
         edges {
           node {
             directorName
@@ -22,6 +17,7 @@ const DirOfTheDay = () => {
                 url
               }
             }
+            slug
           }
         }
       }
@@ -30,12 +26,9 @@ const DirOfTheDay = () => {
   const directorsArray = data.allContentfulTheaterDirector.edges.map(item => ({
     text: item.node.text.text,
     name: item.node.directorName,
-    // url: item.node.image.file.url,
     imageURL: item.node.image.file.url,
-  }))
-  // console.log(directorsArray);
-  // console.log(data);
-  // console.log(data2);
+    slug: item.node.slug
+  })).filter(elem => elem.slug.slice(-2) === props.location.pathname.slice(1, 3));
   const getRandomInt = (max) => {
     return Math.floor(Math.random() * Math.floor(max));
   };
@@ -48,22 +41,16 @@ const DirOfTheDay = () => {
           <div className="flex-end col-6">
             <div className="d-of-day__photo"
             style={{
-              background: `url(${directorsArray[randomDirector].imageURL}) no-repeat`,
+              backgroundImage: `url(${directorsArray[randomDirector].imageURL})`,
               backgroundSize: "100%",
-            }}>{/* 
-              <img
-                style={{
-                  height: '200px',
-
-                }}
-                src={directorsArray[randomDirector].imageURL}></img> */}
+            }}>
             </div>
           </div>
           <div className="col-6">
-            <h6>THEATER DIRECTOR OF THE DAY</h6>
+            <h6>{intl.formatMessage({ id: "directorOfTheDay.title" })}</h6>
             <h3>{directorsArray[randomDirector].name}</h3>
             <p>{directorsArray[randomDirector].text}</p>
-              <button type="button" className="btn btn-primary">Read more</button>
+              <button type="button" className="btn btn-primary">{intl.formatMessage({ id: "directorOfTheDay.button" })}</button>
           </div>
         </div>
       </div>
@@ -71,4 +58,4 @@ const DirOfTheDay = () => {
   )
 }
 
-export default DirOfTheDay;
+export default injectIntl(DirOfTheDay);
