@@ -1,22 +1,27 @@
-.directors{
+.directors {
   display: flex;
   flex-direction: column;
   align-items: center;
-  &__top{
+
+  &__top {
     width: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
     padding-left: 10%;
+    margin-bottom: 10px;
+
     & img {
       height: 21vw;
       width: 15vw;
       margin: 15px;
       border-radius: 10px;
     }
-    .top__info{
+
+    .top__info {
       margin: 0 0 10% 5%;
       width: 60%;
+
       & h1 {
         font-size: 1.7vw;
         font-weight: 600;
@@ -24,6 +29,7 @@
         color: #616161;
         margin: 10px;
       }
+
       & p {
         font-family: 'Rubik Mono One', sans-serif;
         font-weight: 700;
@@ -34,56 +40,66 @@
       }
     }
   }
-  &__lifeinfo{
+
+  &__lifeinfo {
     margin: 10px 0;
-    .timeline{
-      margin: 15px;
+
+    .timeline {
+      margin: 0 15px;
       font-size: 18px;
     }
   }
-  &__works{
+
+  &__works {
     width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
-    .info{
+
+    .info {
       width: 100%;
       display: flex;
       justify-content: space-around;
       align-items: center;
       margin: 20px;
       background-color: rgb(159, 144, 126);
-      &__list{
+
+      &__list {
         display: flex;
         flex-direction: column;
         align-items: center;
         width: 50%;
         font-size: 1.4vw;
         color: #4c2d2d;
-        & button{
+
+        & button {
           margin: 5px;
           background-color: white;
           color: #9f907e;
           border-color: white;
-          &:hover{
+
+          &:hover {
             background-color: #4c2d2d;
             color: white;
           }
         }
       }
-      & iframe{
+
+      & iframe {
         margin: 20px 40px 20px 0;
         border-radius: 10px;
         box-shadow: 10px 10px 5px 1px rgba(87,87,87,0.25);;
       }
     }
-    .gallery{
+
+    .gallery {
       width: 80%;
       margin: 0 0 60px 0;
       display: grid;
       grid-gap: 50px;
       grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
       grid-template-rows: repeat(2, 400px);
+
       & img {
         margin: 20px;
         width: 100%;
@@ -92,9 +108,14 @@
         transition: all .2s;
         border-radius: 5px;
       }
+
       & img:hover {
         transform: scale(1.2);
       }
     }
   }
+}
+
+.timeline--wrapper {
+  padding: 0 12px;
 }
