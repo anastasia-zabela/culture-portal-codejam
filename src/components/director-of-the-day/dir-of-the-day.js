@@ -50,18 +50,15 @@ const DirOfTheDay = ({ intl, props }) => {
             <h6>{intl.formatMessage({ id: "directorOfTheDay.title" })}</h6>
             <h3>{directorsArray[randomDirector].name}</h3>
             <p>{directorsArray[randomDirector].text}</p>
-            <button
-              type="button"
+            <Link
               className="btn btn-primary"
-            ><Link
               style={{
                 textDecoration: 'none',
                 color: 'white',
               }}
               to={`/directors/${directorsArray[randomDirector].slug}`}>
-                {intl.formatMessage({ id: "directorOfTheDay.button" })}
-              </Link>
-            </button>
+              {intl.formatMessage({ id: "directorOfTheDay.button" })}
+            </Link>
           </div>
         </div>
       </div>

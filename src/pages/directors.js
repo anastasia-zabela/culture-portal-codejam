@@ -7,7 +7,7 @@ import ListOfDir from "../components/list-of-directors/list-of-directors";
 const Directors = (props) => {
   const data = useStaticQuery(graphql`
       query {
-      allContentfulTheaterDirector {
+      allContentfulTheaterDirector(sort: {order: ASC, fields: directorName}){
         edges {
           node {
             city

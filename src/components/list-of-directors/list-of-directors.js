@@ -1,5 +1,4 @@
 import React from 'react';
-import { graphql, useStaticQuery } from "gatsby";
 
 import SearchBar from '../searchbar/searchbar';
 import listOfDirStyle from './list-of-directors.module.scss';
