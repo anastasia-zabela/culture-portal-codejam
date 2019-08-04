@@ -5,6 +5,7 @@
   bottom: 0;
   left: 0;
   right: 0;
+  z-index: 222;
 }
 
 .modalWindow {
@@ -13,7 +14,6 @@
   left: 50%;
   transform: translate(-50%, -50%);
   background-color: #fff;
-  min-height: 200px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -24,6 +24,28 @@
 .modalBody,
 .modalFooter {
   padding: 10px 20px;
+}
+
+.modalBody {
+  & div {
+    width: 680px;
+    height: 500px;
+
+    @media screen and (max-width: 700px) {
+      width: 480px;
+      height: 300px;
+    }
+
+    @media screen and (max-width: 580px) {
+      width: 400px;
+      height: 250px;
+    }
+
+    @media screen and (max-width: 400px) {
+      width: 250px;
+      height: 150px;
+    }
+  }
 }
 
 .modalHeader {

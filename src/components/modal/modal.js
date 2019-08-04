@@ -18,11 +18,7 @@ const Modal = ({
             </div>
             <div
               className={modalStyles.modalBody}
-              style={{
-                width: '680px',
-                height: '500px'
-              }}
-            >
+              >
               {children}
             </div>
           </div>

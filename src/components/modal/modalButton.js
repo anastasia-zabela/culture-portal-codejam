@@ -35,8 +35,8 @@ class ModalButton extends Component {
           <YouTube
             videoId={videoID}
             opts={{
-              width: '640px',
-              height: '480px'
+              width: '100%',
+              height: '100%'
             }}
           />
         </Modal>
