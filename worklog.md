@@ -7,6 +7,8 @@
 | 3 hours | Adding new template for list of directors and adding style for it |
 | 1 hour | Adding list of works and years of life to template |
 | 1 hour | Changing styles for director page (name, photo, description) |
+| 1.5 hours | Adding template for home page with language-plugin |
+| 1 hour | Changing style for language buttons and minor fix of how it works |
 | 4 hours | Adding responsive design for description home page |
 
 

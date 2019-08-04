@@ -2,19 +2,15 @@ import React from "react";
 import { IntlContextConsumer } from "gatsby-plugin-intl";
 
 import LangButton from './langButton';
+import swicthButtonsStyle from './switchbuttons.module.scss';
 
 const Switcher = ({ path, slug }) => {
-
+  const locale = localStorage.getItem('gatsby-intl-language');
   return (
-    <div
-      className="language"
-      style={{
-        float: "right",
-      }}
-    >
+    <div className={swicthButtonsStyle.btnLang}>
       <IntlContextConsumer>
         {({ language: currentLocale }) =>
-          <>
+          <div className="btn-group" role="group" aria-labelledby="Basic example">
             <LangButton
               lang='en'
               path={path}
@@ -26,14 +22,14 @@ const Switcher = ({ path, slug }) => {
               path={path}
               slug={slug}
               currentLocale={currentLocale}
-            >Rus</LangButton>
+            >Ru</LangButton>
             <LangButton
               lang='be'
               path={path} 
               slug={slug}
               currentLocale={currentLocale}
-            >Bel</LangButton>
-          </>
+            >By</LangButton>
+          </div>
         }
       </IntlContextConsumer>
     </div>
