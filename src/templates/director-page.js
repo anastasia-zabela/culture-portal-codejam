@@ -21,11 +21,15 @@ const DirectorPage = (props) => {
   return (
     <Layout path={props.path} slug={slug}>
       <div className="directors">
-        <div className="directors__top">
-          <img src={image.file.url} alt={directorName} className={directorPageStyles.dirimage} />
-          <div className="top__info">
-            <h1>{`${directorName} (${years})`}</h1>
-            <p>{text.text}</p>
+        <div className="directors__top container">
+          <div className="row">
+            <div className="col-xs-12 col-sm-6">
+              <img src={image.file.url} alt={directorName} className={directorPageStyles.dirimage} />
+            </div>
+            <div className="top__info col-xs-12 col-sm-6">
+              <h1>{`${directorName} (${years})`}</h1>
+              <p>{text.text}</p>
+            </div>
           </div>
         </div>
 
