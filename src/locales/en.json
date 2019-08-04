@@ -14,7 +14,7 @@
     "title": "Our team",
     "members": {
       "first": {
-        "contribution": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus massa diam,feugiat quis purus eu, lobortis fermentum nunc. English"
+        "contribution": "Creating director info generation template, collaboration in creating Contentful's content model, adding and translating content, creating responsive layouts for certain elements, refactoring"
       },
       "second": {
         "contribution": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus massa diam,feugiat quis purus eu, lobortis fermentum nunc. English"
@@ -23,7 +23,7 @@
         "contribution": "Did something, sometimes it was useful"
       },
       "fourth": {
-        "contribution": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus massa diam,feugiat quis purus eu, lobortis fermentum nunc. English"
+        "contribution": "Collecting textual info and related media files, creating responsive layouts of certain elements, developing the searchbar component"
       }
     }
   },
