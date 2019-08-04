@@ -52,7 +52,7 @@ const Header = ({ path, slug, intl }) => {
               </>
             </div>
             <div className="col-md-6 col-sm-12">
-              <ul className="nav justify-content-center">
+              <ul className="nav">
                 <li className="nav-item active">
                   <>
                     {path ?
