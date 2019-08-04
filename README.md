@@ -52,6 +52,7 @@ Maximum points -  **240**
 | 2.5 hours | Adding timeline to template  |
 | 1 hour | Adding gallery to template  |
 | 3 hours | Translation into English and adding content to Contentful |
+| 4 hours | Responsive layout of certain elements and refactoring |
 
 
 *yurikazliak*
