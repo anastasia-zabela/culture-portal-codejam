@@ -5,7 +5,7 @@ import { injectIntl } from 'gatsby-plugin-intl';
 const Team = ({ intl }) => {
   const data = {
     member1: {
-      name: 'Name Lastname',
+      name: 'Artyom Vecherov',
       github: '@lion9',
       telegram: '@ArtyomVecherov',
       contribution: intl.formatMessage({ id: "team.members.first.contribution" }),
@@ -19,14 +19,14 @@ const Team = ({ intl }) => {
       photo: 'url(https://i.pinimg.com/564x/cf/37/05/cf3705b02356556cbd63cf4da90f2ef2.jpg)',
     },
     member3: {
-      name: 'Name Lastname',
+      name: 'Yuri Kazliak',
       github: '@yurikazliak',
       telegram: '@fatmanyura',
       contribution: intl.formatMessage({ id: "team.members.third.contribution" }),
       photo: 'url(https://i.pinimg.com/564x/22/ad/be/22adbe8c2d32a5a80742387dc4596f1a.jpg)',
     },
     member4: {
-      name: 'Name Lastname',
+      name: 'Uladzislau Khmialnitski',
       github: '@Matirniy',
       telegram: 'matirniy',
       contribution: intl.formatMessage({ id: "team.members.fourth.contribution" }),
