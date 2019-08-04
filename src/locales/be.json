@@ -14,16 +14,16 @@
     "title": "Наша каманда",
     "members": {
       "first": {
-        "contribution": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus massa diam,feugiat quis purus eu, lobortis fermentum nunc. Беларуская"
+        "contribution": "Стварэнне шаблону для генерацыі рэжысёра, напаўненне кантэнтам, пераклады на ангельскую мову, адаптыўны дызайн асобных элементаў, рэфактарынг"
       },
       "second": {
         "contribution": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus massa diam,feugiat quis purus eu, lobortis fermentum nunc. Беларуская"
       },
       "third": {
-        "contribution": "Нешта там рабіў, часам быў карысны"
+        "contribution": "Стварэнне старонкі рэжысёраў, праца з кантэнтам, пераклад на беларускую, даданне магчымасці пераключэння моў, адаптив некаторых элементаў"
       },
       "fourth": {
-        "contribution": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus massa diam,feugiat quis purus eu, lobortis fermentum nunc. Беларуская"
+        "contribution": "Збор тэкставай, аўдыё- і відэа інфармацыі, стварэнне адаптыўнага дызайну асобных элементаў, стварэнне пошукавага радка"
       }
     }
   },
