@@ -88,7 +88,7 @@
       & iframe {
         margin: 20px 40px 20px 0;
         border-radius: 10px;
-        box-shadow: 10px 10px 5px 1px rgba(87,87,87,0.25);;
+        box-shadow: 10px 10px 5px 1px rgba(87,87,87,0.25);
       }
     }
 
@@ -107,10 +107,12 @@
         object-fit: cover;
         transition: all .2s;
         border-radius: 5px;
+        box-shadow: 10px 10px 5px 1px rgba(87,87,87,0.15);
       }
 
       & img:hover {
-        transform: scale(1.2);
+        transform: scale(1.08);
+        box-shadow: 15px 15px 10px 1px rgba(87,87,87,0.15);
       }
     }
   }
