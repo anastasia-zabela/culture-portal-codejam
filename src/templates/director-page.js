@@ -52,12 +52,16 @@ const DirectorPage = (props) => {
         </div>
 
         <div className="directors__works">
-          <div className="info">
-            <div className="info__list">
-              <ul>{listOfWorks}</ul>
-              <ModalButton videoID={videoID} />
+          <div className="info container">
+            <div className="row">
+              <div className="info__list col-sm-12 col-lg-6">
+                <ul>{listOfWorks}</ul>
+                <ModalButton videoID={videoID} />
+              </div>
+              <div className="info__video col-sm-12 col-lg-6">
+                <GoogleMap srcLink={place.internal.content}></GoogleMap>
+              </div>
             </div>
-            <GoogleMap srcLink={place.internal.content}></GoogleMap>
           </div>
           <div className="gallery">
             {gallery.map((gallery_item, key) => {
