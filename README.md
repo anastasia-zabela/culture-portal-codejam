@@ -70,3 +70,9 @@ Maximum points -  **240**
 
 | time spent | feature |
 |------------|---------|
+| 1 hour | Adding directors information|
+| 1 hour | Translate directors information |
+| 1.5 hour | Add searchbox into directors page |
+| 3 hours | Create modal window |
+| 0.5 hours | Add youtube button |
+| 5 hours | Change director page style |
