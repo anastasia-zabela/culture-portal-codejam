@@ -28,7 +28,7 @@ const Team = ({ intl }) => {
     member4: {
       name: 'Name Lastname',
       github: '@Matirniy',
-      telegram: '',
+      telegram: 'matirniy',
       contribution: intl.formatMessage({ id: "team.members.fourth.contribution" }),
       photo: 'url(https://i.pinimg.com/564x/27/3c/c9/273cc9e32b96d0e48b3d51a38502078d.jpg)',
     }
