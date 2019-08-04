@@ -56,7 +56,7 @@
     align-items: center;
 
     .info {
-      width: 100%;
+      max-width: 100vw;
       display: flex;
       justify-content: space-around;
       align-items: center;
@@ -67,7 +67,7 @@
         display: flex;
         flex-direction: column;
         align-items: center;
-        width: 50%;
+        justify-content: center;
         font-size: 1.4vw;
         color: #4c2d2d;
 
@@ -88,6 +88,15 @@
         margin: 20px 40px 20px 0;
         border-radius: 10px;
         box-shadow: 10px 10px 5px 1px rgba(87,87,87,0.25);
+
+
+      }
+
+      &__video {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
       }
     }
 
