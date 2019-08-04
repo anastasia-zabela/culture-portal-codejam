@@ -21,6 +21,7 @@
 | 0.5 hour | Adding text data from Contentfull to template  |
 | 2.5 hours | Adding timeline to template  |
 | 1 hour | Adding gallery to template  |
+| 3 hours | Translation into English and adding content to Contentful |
 
 
 *yurikazliak*
