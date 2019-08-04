@@ -38,7 +38,6 @@ const DirOfTheDay = ({ intl, props }) => {
     <article className="d-of-day">
       <div className="container">
         <div className="row">
-          <h6>{intl.formatMessage({ id: "directorOfTheDay.title" })}</h6>
           <div className="flex-end col-6">
             <div className="d-of-day__photo"
               style={{
@@ -49,6 +48,7 @@ const DirOfTheDay = ({ intl, props }) => {
             </div>
           </div>
           <div className="col-6">
+            <h6>{intl.formatMessage({ id: "directorOfTheDay.title" })}</h6>
             <h3>{directorsArray[randomDirector].name}</h3>
             <p>{directorsArray[randomDirector].text}</p>
             <Link
