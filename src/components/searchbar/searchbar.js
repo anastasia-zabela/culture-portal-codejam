@@ -48,12 +48,12 @@ class SearchBar extends React.Component {
                   key={this.state.selectedOption.slug}
                   to={`/directors/${this.state.selectedOption.slug}`}
                   style={{ background: '#d6d7d2' }}>
-                  <div style={{ 
+                  <div style={{
                           width: 100,
                           height: 120,
                           backgroundImage: `url(${this.state.selectedOption.image})`,
                           backgroundSize: 100
-                          }}></div> 
+                          }}></div>
                   <h2>{this.state.selectedOption.label}</h2>
                 </Link>
               </div>
@@ -64,12 +64,12 @@ class SearchBar extends React.Component {
                       className={searchBarStyle.director}
                       key={item.slug}
                       to={`/directors/${item.slug}`}>
-                      <div style={{ 
+                      <div style={{
                         width: 100,
                         height: 120,
                         backgroundImage: `url(${item.image})`,
                         backgroundSize: 100
-                        }}></div> 
+                        }}></div>
                       <h2>{item.label}</h2>
                     </Link>
                 )
