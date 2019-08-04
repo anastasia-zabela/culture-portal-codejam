@@ -66,7 +66,7 @@ const DirectorPage = (props) => {
           <div className="gallery">
             {gallery.map((gallery_item, key) => {
               return (
-                <div key={key}><img src={gallery_item.file.url} alt={gallery_item.file.url} className={directorPageStyles.image} /></div>
+                <img src={gallery_item.file.url} alt={gallery_item.file.url} className="img-fluid" />
               )
             })}
           </div>
