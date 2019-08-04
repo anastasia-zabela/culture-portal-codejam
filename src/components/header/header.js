@@ -2,7 +2,7 @@ import React from 'react';
 import { Link, injectIntl } from 'gatsby-plugin-intl';
 import { Link as LinkGat } from 'gatsby';
 
-import Switcher from '../../components/switcher';
+import Switcher from '../switchbuttons/switcher';
 import be from '../../locales/be.json';
 import ru from '../../locales/ru.json';
 import en from '../../locales/en.json';
@@ -60,18 +60,8 @@ const Header = ({ path, slug, intl }) => {
               </ul>
             </div>
             <div className="col-3">
-              <div className="dropdown">
-                <button className="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                  English
-                </button>
-                <div className="dropdown-menu" aria-labelledby="dropdownMenu2">
-                  <button className="dropdown-item" type="button">English</button>
-                  <button className="dropdown-item" type="button">Белорусский</button>
-                  <button className="dropdown-item" type="button">Русский</button>
-                </div>
-              </div>
+              <Switcher path={path} slug={slug} />
             </div>
-            <Switcher path={path} slug={slug} />
           </div>
         </div>
       </nav>

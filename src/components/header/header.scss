@@ -4,6 +4,10 @@ header {
 
   & .row {
     width: 100%;
+
+    & .col-3:first-child {
+      padding-left: 0;
+    }
   }
 
   & h4 {

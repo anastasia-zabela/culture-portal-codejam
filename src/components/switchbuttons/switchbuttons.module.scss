@@ -1,0 +1,31 @@
+.btn-lang {
+  float: right;
+
+  & button {
+    background: #9f907e;
+    color: #e6e6e6;
+    border: none;
+    outline: none;
+
+    &:hover {
+      background: #847563;
+      outline: none;
+    }
+
+    &:active {
+      background: #3d0d15 !important;
+    }
+  }
+
+  & a {
+    font-weight: normal;
+    background: #9f907e;
+    border: none;
+    color: #e6e6e6;
+
+    &:hover {
+      background: #847563;
+      color: #e6e6e6;
+    }
+  }
+}
