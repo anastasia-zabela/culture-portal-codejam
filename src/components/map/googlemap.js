@@ -1,15 +1,15 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
+import mapStyles from './googlemap.module.scss'
+
 const GoogelMap = ({ srcLink }) => {
   return (
     <>
-      <iframe
+      <iframe className={mapStyles.map}
         title="googlemap"
         src={srcLink}
         style={{
-          width: "600px",
-          height: "450px",
           frameborder: "0",
           border: "0px",
         }}
