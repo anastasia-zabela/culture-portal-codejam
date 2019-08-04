@@ -12,9 +12,9 @@ const Team = ({ intl }) => {
       photo: 'url(https://i.pinimg.com/564x/8b/04/2f/8b042f5e23a2b3f391f163fd44cf1ec7.jpg)',
     },
     member2: {
-      name: 'Name Lastname',
+      name: 'Anastasia Zabela',
       github: '@anastasia-zabela',
-      telegram: '',
+      telegram: '@anastasia-zabela',
       contribution: intl.formatMessage({ id: "team.members.second.contribution" }),
       photo: 'url(https://i.pinimg.com/564x/cf/37/05/cf3705b02356556cbd63cf4da90f2ef2.jpg)',
     },
