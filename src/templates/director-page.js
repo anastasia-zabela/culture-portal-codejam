@@ -33,13 +33,13 @@ const DirectorPage = (props) => {
           {json.entries.map((entry) => {
             return (
               <div key={entry.key}>
-                <Timeline lineColor={'#ddd'}>
+                <Timeline lineColor={'#9f907e'}>
                   <TimelineItem
                     key={entry.key}
                     dateText={entry.date}
-                    dateInnerStyle={{ background: '#76bb7f' }}
+                    dateInnerStyle={{ background: '#9f907e' }}
                   >
-                    <p>{entry.content}</p>
+                    <p className={directorPageStyles.entryContent}>{entry.content}</p>
                   </TimelineItem>
                 </Timeline>
               </div>
