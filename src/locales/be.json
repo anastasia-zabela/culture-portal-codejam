@@ -3,7 +3,7 @@
     "title": "Тэатральныя рэжысёры Беларусi",
     "nav": {
       "home": "На пачатковую",
-      "list": "Да спiсу рэжысёрау"
+      "list": "Да спiсу рэжысёраў"
     }
   },
   "description": {
@@ -20,7 +20,7 @@
         "contribution": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus massa diam,feugiat quis purus eu, lobortis fermentum nunc. Беларуская"
       },
       "third": {
-        "contribution": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus massa diam,feugiat quis purus eu, lobortis fermentum nunc. Беларуская"
+        "contribution": "Нешта там рабіў, часам быў карысны"
       },
       "fourth": {
         "contribution": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus massa diam,feugiat quis purus eu, lobortis fermentum nunc. Беларуская"

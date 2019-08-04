@@ -23,6 +23,20 @@ const Header = ({ path, slug, intl }) => {
     homeLink = lang[`${path.slice(-3, -1)}`].header.nav.home;
     directorsLink = lang[`${path.slice(-3, -1)}`].header.nav.list;
   }
+  const stringSlicer = (string) => {
+    const firstSpaceIndex = string.indexOf(' ');
+    const firstPart = string.slice(0, firstSpaceIndex);
+    const secondSpaceIndex = string.indexOf(' ', firstSpaceIndex + 1);
+    const secondPart = string.slice(firstSpaceIndex, secondSpaceIndex);
+    const thirdPart = string.slice(secondSpaceIndex);
+    return (
+      <>
+        {firstPart} <br />
+        {secondPart} <br />
+        {thirdPart}
+      </>
+    )
+  }
   return (
     <header>
       <nav className="navbar navbar-expand-lg navbar-light">
@@ -31,9 +45,9 @@ const Header = ({ path, slug, intl }) => {
             <div className="col-3">
               <>
                 {headerTitle ?
-                  (<h4>{headerTitle}</h4>)
+                  (<h4>{stringSlicer(headerTitle)}</h4>)
                   :
-                  (<h4>{intl.formatMessage({ id: "header.title" })}</h4>)
+                  (<h4>{stringSlicer(intl.formatMessage({ id: "header.title" }))}</h4>)
                 }
               </>
             </div>

@@ -21,13 +21,13 @@ const Switcher = ({ path, slug }) => {
               path={path}
               slug={slug}
               currentLocale={currentLocale}
-            >Ru</LangButton>
+            >Рус</LangButton>
             <LangButton
               lang='be'
               path={path} 
               slug={slug}
               currentLocale={currentLocale}
-            >By</LangButton>
+            >Бел</LangButton>
           </div>
         }
       </IntlContextConsumer>

@@ -43,6 +43,7 @@ const DirOfTheDay = ({ intl, props }) => {
               style={{
                 backgroundImage: `url(${directorsArray[randomDirector].imageURL})`,
                 backgroundSize: "100%",
+                backgroundRepeat: 'no-repeat',
               }}>
             </div>
           </div>
