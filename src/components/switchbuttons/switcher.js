@@ -5,7 +5,6 @@ import LangButton from './langButton';
 import swicthButtonsStyle from './switchbuttons.module.scss';
 
 const Switcher = ({ path, slug }) => {
-  const locale = localStorage.getItem('gatsby-intl-language');
   return (
     <div className={swicthButtonsStyle.btnLang}>
       <IntlContextConsumer>

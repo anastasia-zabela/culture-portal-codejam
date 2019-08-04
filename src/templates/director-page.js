@@ -1,5 +1,4 @@
 import React from 'react';
-import { Link } from 'gatsby-plugin-intl';
 import { Timeline, TimelineItem } from 'vertical-timeline-component-for-react';
 import { graphql } from 'gatsby';
 
