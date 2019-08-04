@@ -42,7 +42,7 @@ const Header = ({ path, slug, intl }) => {
       <nav className="navbar navbar-expand-lg navbar-light">
         <div className="container-fluid">
           <div className="row">
-            <div className="col-3">
+            <div className="col-lg-3 col-sm-12">
               <>
                 {headerTitle ?
                   (<h4>{stringSlicer(headerTitle)}</h4>)
@@ -51,7 +51,7 @@ const Header = ({ path, slug, intl }) => {
                 }
               </>
             </div>
-            <div className="col-6">
+            <div className="col-lg-6 col-sm-12">
               <ul className="nav justify-content-center">
                 <li className="nav-item active">
                   <>
@@ -73,7 +73,7 @@ const Header = ({ path, slug, intl }) => {
                 </li>
               </ul>
             </div>
-            <div className="col-3">
+            <div className="col-lg-3 сol-sm-12">
               <Switcher path={path} slug={slug} />
             </div>
           </div>
